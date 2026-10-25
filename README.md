@@ -47,15 +47,24 @@ Senior Linux and DevOps engineer with more than 25 years of experience supportin
 
 ## Selected Work
 
-| Project | Description | Technologies |
-|---|---|---|
-| **SNMP-to-Jira Alert Bridge** | Asynchronous SNMP trap receiver that creates Jira Service Management tickets from network faults, with node-level de-duplication, flap dampening and self-validating field mapping; deployed as a hardened systemd service | Python, pysnmp (asyncio), systemd, Jira REST API |
-| **RHEL Fleet Automation** | Patching, provisioning and compliance reporting across large RHEL environments, integrated with CI/CD pipelines | Ansible, Red Hat Satellite, Jenkins |
-| **Infrastructure Observability** | Kibana dashboards and Elastic Agent / Metricbeat collection for disk, host and service health in production | Elasticsearch, Kibana, Elastic Agent |
-| **Employee Leave Portal** | Web application with Microsoft 365 single sign-on, manager approval by email, delegation and leave categories | Python, Microsoft Graph, Entra ID |
-| **Netrova** *(in development)* | AI-assisted network troubleshooting agent: source-agnostic alert intake, diagnostic and restoration playbooks, evidence collection for Level 2 support, and a headless mode for CI/CD | Python, LLMs, Ansible, Jira, PagerDuty |
+### Public repositories
 
-> Most of my production work resides in private enterprise repositories. Sanitized public examples are being published to this profile.
+| Repository | Description | Technologies |
+|---|---|---|
+| [**snmp-trap-jira-bridge**](https://github.com/ebrahimsidat/snmp-trap-jira-bridge) | SNMP v2c/v3 trap receiver that opens Jira Service Management tickets with node-level de-duplication, flap dampening, self-healing field handling and PagerDuty fail-over; hardened systemd unit and container image | Python, pysnmp, Jira REST API, PagerDuty, systemd, Docker |
+| [**ansible-rhel-baseline**](https://github.com/ebrahimsidat/ansible-rhel-baseline) | Ansible roles for RHEL 8/9: safe rolling patching, a CIS-aligned security baseline and a read-only fleet health check with Markdown and JSON reports | Ansible, RHEL, CIS Benchmarks, auditd, firewalld |
+| [**terraform-gcp-foundation**](https://github.com/ebrahimsidat/terraform-gcp-foundation) | Terraform modules for a secure Google Cloud foundation: private VPC with Cloud NAT and IAP-only SSH, centralised audit logging and additive, validated IAM | Terraform, Google Cloud, tflint, Checkov |
+| [**elastic-linux-observability**](https://github.com/ebrahimsidat/elastic-linux-observability) | Elastic Stack lab (Elasticsearch, Kibana, Metricbeat), lifecycle and alerting assets, and `fsmon`, a capacity check with Nagios-compatible exit codes, integration-tested against a live Elasticsearch | Elasticsearch, Kibana, Metricbeat, Python, Docker Compose |
+
+Every repository includes automated CI (linting, tests, security scanning), documentation of design decisions,
+and contribution and security policies.
+
+### Enterprise work (private repositories)
+
+- **RHEL fleet automation:** patching, provisioning and compliance reporting across large RHEL estates with Satellite, Ansible Tower and Jenkins
+- **Network fault-to-ticket automation:** production SNMP alert ingestion feeding Jira Service Management and on-call paging for a national carrier network
+- **Infrastructure observability:** Kibana dashboards and Metricbeat / Elastic Agent pipelines for host and service health
+- **Netrova** *(in development):* AI-assisted network troubleshooting agent with source-agnostic alert intake, diagnostic playbooks and a headless CI/CD mode
 
 ---
 
